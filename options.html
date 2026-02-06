@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Translator Settings</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-width: 300px;
+            color: #333;
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Simple password toggle if we wanted, but focusing on simple input first */
+
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #1557b0;
+        }
+
+        .status {
+            margin-top: 10px;
+            font-size: 13px;
+            color: green;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .status.show {
+            opacity: 1;
+        }
+
+        .help-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>AI Translator Settings</h2>
+
+    <div class="form-group">
+        <label for="apiKey">Google Gemini API Key</label>
+        <input type="password" id="apiKey" placeholder="Enter your API Key (AI Studio)">
+        <div class="help-text">
+            Get your key from <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>.
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="modelName">Model Name</label>
+        <input type="text" id="modelName" placeholder="gemini-1.5-flash">
+        <div class="help-text">Try: <code>gemini-1.5-flash</code>, <code>gemini-2.0-flash-exp</code>, or
+            <code>gemini-1.5-pro</code></div>
+    </div>
+
+    <div style="display: flex; gap: 10px;">
+        <button id="saveBtn">Save Settings</button>
+        <button id="checkBtn" style="background-color: #34a853;">Check Available Models</button>
+    </div>
+
+    <div id="status" class="status">Settings saved.</div>
+    <pre id="debugOutput"
+        style="margin-top: 15px; background: #f5f5f5; padding: 10px; border-radius: 4px; font-size: 11px; overflow-x: auto; display: none;"></pre>
+
+    <script src="options.js"></script>
+</body>
+
+</html>

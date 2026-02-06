@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 320px;
+            padding: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 16px;
+            color: #1a73e8;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 13px;
+        }
+
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background-color: #1557b0;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        #status {
+            margin-top: 8px;
+            font-size: 12px;
+            color: green;
+            text-align: center;
+            min-height: 18px;
+        }
+
+        .shortcut-link {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            margin-top: -10px;
+        }
+
+        .shortcut-link:hover {
+            color: #1a73e8;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>AI Translator Settings</h2>
+
+    <div class="form-group">
+        <label for="apiKey">API Key</label>
+        <input type="password" id="apiKey" placeholder="Google AI Studio Key">
+    </div>
+
+    <div class="form-group">
+        <label for="modelSelect">Model</label>
+        <select id="modelSelect">
+            <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+            <option value="gemini-2.5-flash-lite-preview-09-2025">Gemini 2.5 Flash Lite</option>
+            <option value="gemini-2.5-flash-preview-09-2025">Gemini 2.5 Flash</option>
+            <option value="gemini-3-flash-preview">Gemini 3 Flash</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="toneSelect">Translation Tone</label>
+        <select id="toneSelect">
+            <option value="professional">Professional</option>
+            <option value="casual">Casual</option>
+            <option value="concise">Concise</option>
+        </select>
+    </div>
+
+    <div class="form-group checkbox-group">
+        <input type="checkbox" id="autoReplace">
+        <label for="autoReplace">Directly replace selected text</label>
+    </div>
+
+    <button id="saveBtn">Save</button>
+    <div id="status"></div>
+
+    <a href="#" id="shortcutLink" class="shortcut-link">Configure keyboard shortcuts</a>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
