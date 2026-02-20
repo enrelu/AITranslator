@@ -25,10 +25,16 @@ A powerful, minimalist Chrome extension that leverages Google's Gemini AI to pro
 
 ## 🛠️ Installation
 
-1.  Clone this repository or download the source code.
-2.  Open Chrome and navigate to `chrome://extensions/`.
-3.  Enable **"Developer mode"** in the top right corner.
-4.  Click **"Load unpacked"** and select the extension folder.
+**The easiest way:**
+1.  Download the latest release ZIP file from the [Releases page](https://github.com/enrelu/AITranslator/archive/refs/tags/v1.0.0.zip) (or download `ai-translator-v1.0.0.zip` directly).
+2.  Extract the downloaded ZIP file into a folder on your computer.
+3.  Open Chrome and navigate to `chrome://extensions/`.
+4.  Enable **"Developer mode"** in the top right corner.
+5.  Click **"Load unpacked"** and select the folder where you extracted the extension.
+
+**From source:**
+1.  Clone this repository: `git clone https://github.com/enrelu/AITranslator.git`
+2.  Follow steps 3-5 above, selecting the cloned repository folder.
 
 ## 🔑 Setup
 
