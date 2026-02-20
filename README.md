@@ -1,5 +1,7 @@
 # AI Translator Chrome Extension (Powered by Gemini)
 
+![AI Translator Screenshot](screenshot.png)
+
 A powerful, minimalist Chrome extension that leverages Google's Gemini AI to provide high-quality, context-aware translations between English and Spanish.
 
 ## ✨ Key Features
